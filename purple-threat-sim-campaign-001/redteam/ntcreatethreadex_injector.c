@@ -1,0 +1,1 @@
+// Simulates NtCreateThreadEx shellcode injection

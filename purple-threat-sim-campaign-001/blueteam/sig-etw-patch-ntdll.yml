@@ -1,0 +1,11 @@
+title: ETW Patch via NTDLL
+id: blueteam-rule-001
+logsource:
+  product: windows
+  category: image_load
+detection:
+  selection:
+    ImageLoaded|contains: '\ntdll.dll'
+    CallTrace|contains: 'WriteProcessMemory'
+  condition: selection
+level: high
